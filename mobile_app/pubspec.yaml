@@ -1,0 +1,48 @@
+name: drone_controller
+description: ESP32 Drone Control Mobile App
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.17.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # MQTT client for drone communication
+  mqtt_client: ^9.7.2
+  
+  # UI and utilities
+  cupertino_icons: ^1.0.2
+  provider: ^6.0.3
+  shared_preferences: ^2.0.15
+  
+  # Charts and visualization
+  fl_chart: ^0.55.0
+  
+  # Permissions
+  permission_handler: ^10.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  
+  # Add app icons and images
+  assets:
+    - assets/images/
+    - assets/icons/
+  
+  # Custom fonts
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Roboto-Bold.ttf
+          weight: 700
